@@ -1,0 +1,12 @@
+name: Bloodbank
+title: Bloodbank
+username:
+account: thrishavemula
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 3107694
+bundleId: 3791842
+url: https://thrishavemula.shinyapps.io/Bloodbank/
+when: 1603887034.48187
+asMultiple: FALSE
+asStatic: FALSE
