@@ -12,7 +12,7 @@ ui <- fluidPage(
     sidebarPanel(
       tags$head(tags$style('body {color:red;}')),
       # uiOutput ("IMG"),
-      img(src = "A.png",height = 200, width = 200),
+      img(src = "A.jpg",height = 200, width = 200),
       selectInput(inputId = "dataset",
                   label = "Choose a blood group:",
                   choices = c("A+", "A-", "O+","B+", "AB-", "O-","AB-", "B-")),
