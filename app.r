@@ -3,13 +3,14 @@ library(shinyWidgets)
 ui <- fluidPage(
   setBackgroundImage(
     
-    src = "download.jpg"
+    src = "q.jpeg"
     
   ),
   
   titlePanel("BloodBank"),
   sidebarLayout(
     sidebarPanel(
+      tags$head(tags$style('body {color:red;}')),
       # uiOutput ("IMG"),
       img(src = "A.png",height = 200, width = 200),
       selectInput(inputId = "dataset",
