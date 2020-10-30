@@ -1,5 +1,6 @@
 library(shiny)
 library(shinyWidgets)
+library(readr)
 ui <- fluidPage(
   setBackgroundImage(
     
@@ -17,7 +18,7 @@ ui <- fluidPage(
                   label = "Choose a blood group:",
                   choices = c("A+", "A-", "O+","B+", "AB-", "O-","AB-", "B-")),
       selectInput(inputId = "dataset",
-                  label = "choose location",
+                  label = "enter your location",
                   choices = c("Mumbai","Delhi","Chennai","Bangalore", "Hyderabad","Ahmedabad","Kolkata", "Surat", "Pune", "Jaipur","Cochin", "Lucknow", "Kanpur","Nagpur", "Indore","Thane","Bhopal", "Visakhapatnam", "Noida","Patna","Vadodara", "Ghaziabad", "Ludhiana", "Agra", "Nashik", "Faridabad","Meerut","Rajkot","Bhubaneshwar","Salem","Solapur","Varanasi", "Srinagar", "Aurangabad", "Dhanbad","Amritsar","Trivendram","Allahabad","Ranchi","Howrah","Coimbatore","Jabalpur","Gwalior","Vijayawada","Jodhpur","Madurai","Raipur","Kota", "Guwahati")),
       numericInput(inputId = "obs",
                    label = "Number of students details to view:",
@@ -58,7 +59,7 @@ server <- function(input, output) {
   })
   
   output$view <- renderTable({
-    head(datasetInput(), n = input$obs)
+       head(datasetInput(), n = input$obs)
     
   })
   
